@@ -1,0 +1,154 @@
+/* ==========================================
+   CineVerso AI - CSS Variables
+   Design tokens for the entire application
+   ========================================== */
+
+:root {
+    /* === COLORS - Dark Cinematic Theme === */
+
+    /* Backgrounds */
+    --bg-primary: #000000;
+    --bg-secondary: #141414;
+    --bg-card: #181818;
+    --bg-card-hover: #2A2A2A;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+    --bg-gradient-hero: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 50%, #000 100%);
+    --bg-gradient-left: linear-gradient(90deg, #000 0%, transparent 50%);
+
+    /* Accent Colors */
+    --accent-primary: #E50914;
+    --accent-primary-hover: #F40612;
+    --accent-success: #46D369;
+    --accent-warning: #F5C518;
+    --accent-ai-start: #8B5CF6;
+    --accent-ai-end: #EC4899;
+    --accent-ai-gradient: linear-gradient(135deg, var(--accent-ai-start), var(--accent-ai-end));
+
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --text-tertiary: #808080;
+    --text-inverse: #000000;
+
+    /* Border & Shadow */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-focus: rgba(229, 9, 20, 0.5);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.7);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.8);
+
+    /* === TYPOGRAPHY === */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.8125rem;
+    /* 13px */
+    --text-base: 0.9375rem;
+    /* 15px */
+    --text-lg: 1.125rem;
+    /* 18px */
+    --text-xl: 1.25rem;
+    /* 20px */
+    --text-2xl: 1.5rem;
+    /* 24px */
+    --text-3xl: 2rem;
+    /* 32px */
+    --text-4xl: 2.5rem;
+    /* 40px */
+    --text-5xl: 3rem;
+    /* 48px */
+    --text-hero: 4.5rem;
+    /* 72px */
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    /* Line Heights */
+    --leading-tight: 1.1;
+    --leading-snug: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+
+    /* === SPACING (4px scale) === */
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px - xs */
+    --space-4: 1rem;
+    /* 16px - sm */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px - md */
+    --space-8: 2rem;
+    /* 32px - lg */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-12: 3rem;
+    /* 48px - xl */
+    --space-16: 4rem;
+    /* 64px */
+    --space-20: 5rem;
+    /* 80px */
+    --space-24: 6rem;
+    /* 96px */
+
+    /* === BORDERS === */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    /* === TRANSITIONS === */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+    --transition-dramatic: 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* === Z-INDEX === */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-header: 500;
+    --z-fixed: 500;
+    --z-modal-backdrop: 600;
+    --z-modal: 700;
+    --z-popover: 800;
+    --z-tooltip: 900;
+    --z-toast: 1000;
+
+    /* === LAYOUT === */
+    --header-height: 68px;
+    --footer-height: 200px;
+    --sidebar-width: 280px;
+    --container-max: 1400px;
+    --card-width: 230px;
+    --card-aspect: 2/3;
+
+    /* === BREAKPOINTS (for reference) === */
+    --bp-mobile: 768px;
+    --bp-tablet: 1024px;
+    --bp-desktop: 1280px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-normal: 0ms;
+        --transition-slow: 0ms;
+        --transition-dramatic: 0ms;
+    }
+}

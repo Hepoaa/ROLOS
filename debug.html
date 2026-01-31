@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug CineVerso AI</title>
+    <style>
+        body {
+            background: #141414;
+            color: white;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        .success {
+            color: #46D369;
+        }
+
+        .error {
+            color: #E50914;
+        }
+
+        .log {
+            background: #222;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎬 Debug - Cargando módulos...</h1>
+    <div id="logs"></div>
+
+    <script type="module">
+        const logs = document.getElementById('logs');
+
+        function log(msg, isError = false) {
+            const div = document.createElement('div');
+            div.className = `log ${isError ? 'error' : 'success'}`;
+            div.textContent = (isError ? '❌ ' : '✅ ') + msg;
+            logs.appendChild(div);
+            console.log(msg);
+        }
+
+        // Test loading each module individually
+        const modules = [
+            './js/config.js',
+            './js/utils/helpers.js',
+            './js/auth.js',
+            './js/social.js',
+            './js/api/tmdb.js',
+            './js/components/header.js',
+            './js/components/chat.js',
+            './js/components/hero.js',
+            './js/components/authModal.js',
+            './js/components/postComposer.js',
+            './js/components/postCard.js',
+            './js/components/commentSection.js',
+            './js/pages/home.js',
+            './js/pages/movies.js',
+            './js/pages/series.js',
+            './js/pages/anime.js',
+            './js/pages/search.js',
+            './js/pages/games.js',
+            './js/pages/detail.js',
+            './js/pages/profile.js',
+            './js/pages/feed.js',
+            './js/pages/notifications.js',
+            './js/games/guessMovie.js',
+            './js/games/emojiChallenge.js',
+            './js/games/trivia.js',
+            './js/games/director.js',
+            './js/app.js'
+        ];
+
+        async function testModules() {
+            for (const modulePath of modules) {
+                try {
+                    await import(modulePath);
+                    log(`Loaded: ${modulePath}`);
+                } catch (error) {
+                    log(`FAILED: ${modulePath} - ${error.message}`, true);
+                    console.error(error);
+                }
+            }
+
+            log('--- TEST COMPLETE ---');
+        }
+
+        testModules();
+    </script>
+</body>
+
+</html>

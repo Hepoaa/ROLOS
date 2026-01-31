@@ -1,0 +1,237 @@
+/* ==========================================
+   CineVerso AI - Header Social Styles
+   Login button, notification badge, and related
+   ========================================== */
+
+/* Header login button */
+.header-login-btn {
+    padding: var(--space-2) var(--space-5);
+    background: linear-gradient(135deg, var(--accent-primary), #dc2626);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    border-radius: var(--radius-full);
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.header-login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 15px rgba(229, 9, 20, 0.4);
+}
+
+/* Header notification button */
+.header-notif-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-lg);
+    border-radius: var(--radius-full);
+    transition: all 0.2s;
+}
+
+.header-notif-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header-notif-btn.has-notif {
+    animation: bellRing 2s ease-in-out infinite;
+}
+
+@keyframes bellRing {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    10%,
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    20%,
+    40% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+}
+
+.notif-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    font-size: 10px;
+    font-weight: var(--font-bold);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Social profile page styles */
+.social-profile-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.profile-banner {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.social-profile-page .profile-main {
+    padding: 0 var(--space-6) var(--space-6);
+    margin-top: -60px;
+}
+
+.profile-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.profile-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius-full);
+    border: 4px solid var(--bg-primary);
+    overflow: hidden;
+    background: var(--accent-ai-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: var(--font-bold);
+}
+
+.profile-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-display-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+}
+
+.profile-username {
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-2);
+}
+
+.profile-bio {
+    margin: var(--space-3) 0;
+    line-height: 1.6;
+}
+
+.profile-joined {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+.profile-actions-row {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.profile-stats-social {
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--space-6);
+}
+
+.profile-stats-social .stat-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.profile-stats-social .stat-value {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.profile-stats-social .stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.profile-tabs {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-tab {
+    padding: var(--space-3) var(--space-4);
+    color: var(--text-secondary);
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.profile-tab:hover {
+    color: var(--text-primary);
+}
+
+.profile-tab.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+.empty-state {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--text-secondary);
+}
+
+.empty-state .empty-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: var(--space-4);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .profile-info-section {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .profile-avatar-large {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-actions-row {
+        margin-left: auto;
+        margin-top: 0;
+    }
+}
