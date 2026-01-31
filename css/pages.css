@@ -1004,6 +1004,198 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    /* === Hero Mobile === */
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-content {
+        padding: var(--space-4);
+        padding-bottom: var(--space-8);
+    }
+
+    .hero-title {
+        font-size: var(--text-2xl);
+    }
+
+    .hero-meta {
+        gap: var(--space-2);
+        flex-wrap: wrap;
+        font-size: var(--text-sm);
+    }
+
+    .hero-synopsis {
+        font-size: var(--text-sm);
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+
+    .hero-actions .btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-sm);
+    }
+
+    .hero-nav {
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+
+    /* === Detail Page Mobile === */
+    .detail-hero {
+        min-height: auto;
+        height: auto;
+    }
+
+    .detail-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--space-4);
+        gap: var(--space-4);
+    }
+
+    .detail-poster {
+        width: 180px;
+        margin-top: 60px;
+    }
+
+    .detail-info {
+        padding-bottom: var(--space-4);
+    }
+
+    .detail-title {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-2);
+    }
+
+    .detail-original-title {
+        font-size: var(--text-sm);
+    }
+
+    .detail-meta {
+        justify-content: center;
+        gap: var(--space-2);
+        font-size: var(--text-xs);
+    }
+
+    .detail-genres {
+        justify-content: center;
+        gap: var(--space-1);
+    }
+
+    .detail-genres .chip {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-2);
+    }
+
+    .detail-synopsis {
+        font-size: var(--text-sm);
+        text-align: left;
+    }
+
+    .detail-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+
+    .detail-actions .btn {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-sm);
+    }
+
+    .detail-section {
+        padding: var(--space-4);
+    }
+
+    .detail-section-title {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-4);
+    }
+
+    /* === Cast Grid Mobile === */
+    .cast-grid {
+        gap: var(--space-3);
+    }
+
+    .cast-card {
+        width: 100px;
+    }
+
+    .cast-name {
+        font-size: var(--text-xs);
+    }
+
+    .cast-character {
+        font-size: 10px;
+    }
+
+    /* === Page Sections Mobile === */
+    .page-section {
+        padding: var(--space-4);
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .section-title {
+        font-size: var(--text-lg);
+    }
+
+    /* === Games Page Mobile === */
+    .games-page {
+        padding: var(--space-4);
+    }
+
+    .games-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .game-card {
+        padding: var(--space-4);
+    }
+
+    .game-card-icon {
+        font-size: var(--text-3xl);
+    }
+
+    .game-card-title {
+        font-size: var(--text-base);
+    }
+
+    .game-card-description {
+        font-size: var(--text-xs);
+    }
+
+    .game-container {
+        padding: var(--space-4);
+    }
+
+    .game-header {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+    }
+
+    .game-title {
+        font-size: var(--text-xl);
+    }
+
+    /* === Episode Grid Mobile === */
     .episode-grid-container {
         padding: var(--space-4);
         margin: var(--space-4);
@@ -1015,6 +1207,8 @@
 
     .episode-grid-legend {
         gap: var(--space-2);
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .legend-item {
@@ -1037,5 +1231,110 @@
 
     .episode-modal-actions {
         flex-direction: column;
+    }
+
+    /* === Search Page Mobile === */
+    .search-page {
+        padding: var(--space-4);
+    }
+
+    .search-input-large {
+        font-size: var(--text-base);
+        padding: var(--space-3);
+    }
+
+    .search-results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+
+    /* === Category Grid Mobile === */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2);
+    }
+
+    .category-card {
+        padding: var(--space-3);
+    }
+
+    .category-icon {
+        font-size: var(--text-xl);
+    }
+
+    .category-name {
+        font-size: var(--text-xs);
+    }
+
+    /* === General Mobile Fixes === */
+    .page {
+        padding-top: 70px;
+    }
+
+    .grid-auto-fill {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-3) !important;
+    }
+
+    .card {
+        font-size: var(--text-sm);
+    }
+
+    .card-title {
+        font-size: var(--text-xs);
+    }
+
+    .card-meta {
+        font-size: 10px;
+    }
+
+    .card-actions {
+        gap: var(--space-1);
+    }
+
+    .card-action-btn {
+        width: 28px;
+        height: 28px;
+        font-size: var(--text-xs);
+    }
+
+    /* === Carousel Mobile === */
+    .carousel-container {
+        padding: 0 var(--space-4);
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: var(--text-xl);
+    }
+
+    .detail-poster {
+        width: 140px;
+    }
+
+    .detail-title {
+        font-size: var(--text-lg);
+    }
+
+    .grid-auto-fill {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .search-results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

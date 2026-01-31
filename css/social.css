@@ -1069,4 +1069,261 @@
     color: var(--text-secondary);
 }
 
-/* Continue in next file... */
+/* ==========================================
+   Mobile Responsive Styles
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    /* === Auth Modal Mobile === */
+    .auth-modal {
+        padding: var(--space-6);
+        margin: var(--space-4);
+        max-height: calc(100vh - 32px);
+    }
+
+    .auth-social-buttons {
+        flex-direction: column;
+    }
+
+    /* === Feed Layout Mobile === */
+    .feed-layout {
+        flex-direction: column;
+        padding: var(--space-4);
+    }
+
+    .feed-sidebar {
+        width: 100%;
+        position: relative;
+        padding-bottom: var(--space-4);
+    }
+
+    .feed-sidebar-left {
+        display: none;
+    }
+
+    .feed-sidebar-right {
+        display: none;
+    }
+
+    .feed-main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* === Post Composer Mobile === */
+    .composer-textarea {
+        font-size: var(--text-base);
+        min-height: 80px;
+    }
+
+    .composer-tools {
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+
+    .composer-tool {
+        font-size: var(--text-lg);
+    }
+
+    .post-types {
+        justify-content: flex-start;
+        gap: var(--space-2);
+        overflow-x: auto;
+        padding-bottom: var(--space-2);
+    }
+
+    .post-type-btn {
+        font-size: var(--text-xs);
+        padding: var(--space-2) var(--space-3);
+        white-space: nowrap;
+    }
+
+    /* === Post Card Mobile === */
+    .post-card {
+        padding: var(--space-3);
+    }
+
+    .post-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .post-text {
+        font-size: var(--text-sm);
+    }
+
+    .post-actions {
+        gap: var(--space-2);
+    }
+
+    .action-btn {
+        font-size: var(--text-sm);
+        gap: var(--space-1);
+    }
+
+    .action-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* === Linked Content Mobile === */
+    .linked-content {
+        padding: var(--space-2);
+    }
+
+    .linked-poster {
+        width: 40px;
+        height: 60px;
+    }
+
+    .linked-title {
+        font-size: var(--text-sm);
+    }
+
+    .linked-meta {
+        font-size: var(--text-xs);
+    }
+
+    /* === Comments Mobile === */
+    .comment-item {
+        padding: var(--space-3);
+    }
+
+    .comment-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .comment-text {
+        font-size: var(--text-sm);
+    }
+
+    /* === Profile Mobile === */
+    .profile-main {
+        padding: var(--space-4);
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-name {
+        font-size: var(--text-xl);
+    }
+
+    .profile-tabs {
+        gap: var(--space-2);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .profile-tab {
+        font-size: var(--text-sm);
+        padding: var(--space-2) var(--space-3);
+        white-space: nowrap;
+    }
+
+    .profile-stats-social {
+        justify-content: center;
+        gap: var(--space-4);
+    }
+
+    /* === Sidebar Sections Mobile === */
+    .sidebar-section {
+        padding: var(--space-3);
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: var(--space-2);
+    }
+
+    .nav-item {
+        flex-direction: column;
+        font-size: var(--text-xs);
+        padding: var(--space-2);
+        white-space: nowrap;
+    }
+
+    /* === Trending Mobile === */
+    .trending-item {
+        padding: var(--space-2);
+    }
+
+    .trending-tag {
+        font-size: var(--text-sm);
+    }
+
+    /* === Suggestions Mobile === */
+    .suggestion-card {
+        padding: var(--space-2);
+    }
+
+    .suggestion-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* === Link Content Modal Mobile === */
+    .link-content-modal {
+        width: calc(100% - 32px);
+        max-height: calc(100vh - 64px);
+    }
+
+    /* === Feed Tabs Mobile === */
+    .feed-tabs {
+        padding: var(--space-2) 0;
+        gap: var(--space-2);
+    }
+
+    .feed-tab {
+        font-size: var(--text-sm);
+        padding: var(--space-2) var(--space-3);
+    }
+
+    /* === Notifications Mobile === */
+    .notification-item {
+        padding: var(--space-3);
+    }
+
+    .notification-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .notification-text {
+        font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-modal {
+        padding: var(--space-4);
+    }
+
+    .auth-tabs {
+        font-size: var(--text-sm);
+    }
+
+    .post-card {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-name {
+        font-size: var(--text-lg);
+    }
+
+    .profile-stats-social {
+        flex-wrap: wrap;
+    }
+}
